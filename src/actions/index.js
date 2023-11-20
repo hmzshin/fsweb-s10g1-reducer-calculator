@@ -5,7 +5,7 @@ export const CHANGE_OPERATION = "CHANGE_OPERATION";
 export const CLEAR_DISPLAY = "CLEAR_DISPLAY";
 export const SET_MEMORY = "SET_MEMORY";
 export const SET_TOTAL = "SET_TOTAL";
-
+export const CLEAR_MEMORY = "CLEAR_MEMORY";
 export const addOne = () => {
   return { type: ADD_ONE };
 };
@@ -27,4 +27,7 @@ export const setMemory = () => {
 };
 export const setTotal = () => {
   return { type: "SET_TOTAL" };
+};
+export const clearMemory = () => {
+  return { type: "CLEAR_MEMORY" };
 };
