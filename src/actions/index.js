@@ -4,6 +4,7 @@ export const APPLY_NUMBER = "APPLY_NUMBER";
 export const CHANGE_OPERATION = "CHANGE_OPERATION";
 export const CLEAR_DISPLAY = "CLEAR_DISPLAY";
 export const SET_MEMORY = "SET_MEMORY";
+export const SET_TOTAL = "SET_TOTAL";
 
 export const addOne = () => {
   return { type: ADD_ONE };
@@ -23,4 +24,7 @@ export const clearDisplay = () => {
 
 export const setMemory = () => {
   return { type: "SET_MEMORY" };
+};
+export const setTotal = () => {
+  return { type: "SET_TOTAL" };
 };

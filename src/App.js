@@ -9,6 +9,7 @@ import {
   changeOperation,
   clearDisplay,
   setMemory,
+  setTotal,
 } from "./actions";
 
 function App() {
@@ -38,7 +39,7 @@ function App() {
 
             <div className="row">
               <CalcButton value={"M+"} onClick={() => dispatch(setMemory())} />
-              <CalcButton value={"MR"} />
+              <CalcButton value={"MR"} onClick={() => dispatch(setTotal())} />
               <CalcButton value={"MC"} />
             </div>
 
