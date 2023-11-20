@@ -3,12 +3,13 @@ import {
   APPLY_NUMBER,
   CHANGE_OPERATION,
   CLEAR_DISPLAY,
+  SET_MEMORY,
 } from "./../actions";
 
 export const initialState = {
   total: 100,
   operation: "*",
-  memory: 100,
+  memory: 50,
 };
 
 const calculateResult = (num1, num2, operation) => {
@@ -50,6 +51,11 @@ const reducer = (state, action) => {
       return {
         ...state,
         total: 0,
+      };
+    case SET_MEMORY:
+      return {
+        ...state,
+        memory: state.total,
       };
     default:
       return state;
