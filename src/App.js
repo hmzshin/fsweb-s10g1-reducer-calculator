@@ -84,15 +84,26 @@ function App() {
             </div>
 
             <div className="row">
-              <CalcButton value={"+"} />
-              <CalcButton value={"*"} />
-              <CalcButton value={"-"} />
+              <CalcButton
+                value={"+"}
+                onClick={() => dispatch(changeOperation("+"))}
+              />
+              <CalcButton
+                value={"*"}
+                onClick={() => dispatch({ ...changeOperation("*") })}
+              />
+              <CalcButton
+                value={"-"}
+                onClick={() => dispatch({ ...changeOperation("-") })}
+              />
             </div>
 
             <div className="row ce_button">
-              <CalcButton value={"CE"} />
+              <CalcButton
+                value={"CE"}
+                onClick={() => dispatch({ ...clearDisplay() })}
+              />
             </div>
-
           </form>
         </div>
       </div>
